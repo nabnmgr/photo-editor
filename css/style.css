@@ -11,7 +11,36 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 500;
   line-height: 1.5;
   background: #222;
   color: #fff; }
+
+.container {
+  width: 500px;
+  margin: 0 auto; }
+
+.main-img {
+  max-height: 500px;
+  margin-bottom: 2rem; }
+  .main-img img {
+    height: 500px;
+    width: auto;
+    border: #fff solid 3px; }
+
+.controls {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5rem;
+  grid-row-gap: 0.6rem;
+  background: #eee;
+  color: #111;
+  padding: 1.5rem; }
+  .controls .filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .controls input[type="range"] {
+    width: 120px; }
