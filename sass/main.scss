@@ -22,44 +22,80 @@ body {
 }
 
 // Main layout
-.container {
-  width: 500px;
+.img-container {
+  max-width: 620px;
   margin: 0 auto;
-}
+  background: #fff;
+  border: 5px solid #fff;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 0.5rem;
 
-// variables
-// :root {
-//   --brightness: 100%;
-//   --contrast: 100%;
-//   --hue-rotate: 0deg;
-//   --opacity: 100%;
-//   --saturate: 100%;
-//   --sepia: 0%;
-// }
-
-//  IMAGE
-
-.main-img {
-  max-height: 500px;
-  margin-bottom: 2rem;
-
+  // image
   img {
-    height: 500px;
-    width: auto;
-    border: #fff solid 3px;
-    // filter: brightness(var(--brightness));
-    // filter: contrast(var(--contrast));
-    // filter: hue-rotate(var(--hue-rotate));
+    width: 100%;
+  }
 
-    // filter: opacity(var(--opacity));
-    // filter: saturate(var(--saturate));
-    // filter: sepia(var(--sepia));
+  .main-img {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 6;
+  }
+
+  .img--1 {
+    grid-column: 7 / 8;
+    grid-row: 1 / 2;
+  }
+
+  .img--2 {
+    grid-column: 7 / 8;
+    grid-row: 2 / 3;
+  }
+
+  .img--3 {
+    grid-column: 7 / 8;
+    grid-row: 3 / 4;
+  }
+
+  .img--4 {
+    grid-column: 7 / 8;
+    grid-row: 4 / 5;
+  }
+
+  .img--5 {
+    grid-column: 7 / 8;
+    grid-row: 5 / 6;
+  }
+
+  .footprint {
+    grid-column: 7 / 8;
+    grid-row: 6 / 8;
+    color: #222;
+    background: #fff;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .controls {
+    grid-column: 1 / 7;
+    grid-row: 7 / 8;
   }
 }
 
+// .container {
+//   max-width: 620px;
+//   margin: 0 auto;
+// }
+
 // FILTER CONTROLS
 .controls {
-  width: 500px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 5rem;
@@ -74,6 +110,26 @@ body {
     justify-content: space-between;
   }
   input[type="range"] {
-    width: 120px;
+    width: 130px;
+  }
+}
+
+// RESET BUTTON
+.reset {
+  border: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #bbb;
+  color: #111;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    color: #333;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
