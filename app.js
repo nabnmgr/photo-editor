@@ -44,6 +44,11 @@ function changeMainImg(e) {
 
   mainImage.src = e.target.src;
 
+  // add fade in class
+  mainImage.classList.add("fade-in");
+  // remove fade-in after .5s
+  setTimeout(() => mainImage.classList.remove("fade-in"), 400);
+
   // add opacity
   e.target.style.opacity = opacity;
 

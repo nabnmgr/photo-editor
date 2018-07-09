@@ -18,7 +18,7 @@ body {
   font-weight: 500;
   line-height: 1.5;
   background: #222;
-  color: #fff;
+  color: #eee;
 }
 
 // Main layout
@@ -72,7 +72,7 @@ body {
     grid-row: 6 / 8;
     color: #222;
     background: #fff;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
     text-orientation: upright;
     text-transform: uppercase;
     display: flex;
@@ -88,11 +88,6 @@ body {
     grid-row: 7 / 8;
   }
 }
-
-// .container {
-//   max-width: 620px;
-//   margin: 0 auto;
-// }
 
 // FILTER CONTROLS
 .controls {
@@ -131,5 +126,93 @@ body {
 
   &:focus {
     outline: none;
+  }
+}
+
+// FADE ANIMATION
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0.4;
+  animation: fadeIn 0.4s ease-in 1 forwards;
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 580px) {
+  .img-container {
+    .footprint {
+      grid-row: 6 / span 1;
+      writing-mode: horizontal-tb;
+    }
+
+    .controls {
+      grid-column: 1 / 8;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  html {
+    font-size: 50%;
+  }
+
+  .img-container {
+    .controls {
+      grid-template-columns: 1fr;
+      .filter,
+      button {
+        width: 220px;
+        margin: 0 auto;
+      }
+      button {
+        padding: 1rem 0;
+        margin: 1rem auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .img-container {
+    grid-template-rows: repeat(4, 1fr);
+
+    .main-img {
+      grid-column: 1 / span 7;
+      grid-row: 1 / span 5;
+    }
+
+    .img--1 {
+      grid-column: 1 / span 1;
+      grid-row: 6 / span 1;
+    }
+
+    .img--2 {
+      grid-column: 2 / span 1;
+      grid-row: 6 / span 1;
+    }
+
+    .img--3 {
+      grid-column: 3 / span 1;
+      grid-row: 6 / span 1;
+    }
+
+    .img--4 {
+      grid-column: 4 / span 1;
+      grid-row: 6 / span 1;
+    }
+
+    .img--5 {
+      grid-column: 5 / span 1;
+      grid-row: 6 / span 1;
+    }
+
+    .footprint {
+      grid-column: 6 / span2;
+      grid-row: 6 / span 1;
+    }
   }
 }
