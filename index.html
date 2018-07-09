@@ -15,45 +15,45 @@
   <div class="container">
 
     <div class="main-img">
-      <img src="img/img1.jpg" alt="">
+      <img src="img/img3.jpg" alt="">
     </div>
 
     <div class="controls">
       <div class="filter">
         <label for="brightness">Brightness: </label>
-        <input id="brightness" type="range" name="brightness" min="0" max="200" value="100" data-sizing="%">
+        <input class="slider" id="brightness" type="range" name="brightness" min="0" max="200" value="100">
       </div>
       <div class="filter">
         <label for="contrast">Contrast: </label>
-        <input id="contrast" type="range" name="contrast" min="0" max="200" value="100" data-sizing="%">
+        <input class="slider" id="contrast" type="range" name="contrast" min="0" max="200" value="100">
       </div>
       <div class="filter">
         <label for="grayscale">Grayscale: </label>
-        <input id="grayscale" type="range" name="grayscale" min="0" max="100" value="0" data-sizing="%">
+        <input class="slider" id="grayscale" type="range" name="grayscale" min="0" max="100" value="0">
       </div>
-      <div class="filter">
-        <label for="hue">Hue-rotate: </label>
-        <input id="hue" type="range" name="hue" min="0" max="360" value="0" data-sizing="deg">
-      </div>
+
       <div class="filter">
         <label for="invert">Invert: </label>
-        <input id="invert" type="range" name="invert" min="0" max="100" value="0" data-sizing="%">
+        <input class="slider" id="invert" type="range" name="invert" min="0" max="100" value="0">
       </div>
       <div class="filter">
         <label for="opacity">Opacity: </label>
-        <input id="opacity" type="range" name="opacity" min="0" max="100" value="100" data-sizing="%">
+        <input class="slider" id="opacity" type="range" name="opacity" min="0" max="100" value="100">
       </div>
       <div class="filter">
         <label for="saturate">Saturate: </label>
-        <input id="saturate" type="range" name="saturate" min="0" max="200" value="100" data-sizing="%">
+        <input class="slider" id="saturate" type="range" name="saturate" min="0" max="200" value="100">
       </div>
       <div class="filter">
         <label for="sepia">Sepia: </label>
-        <input id="sepia" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%">
+        <input class="slider" id="sepia" type="range" name="sepia" min="0" max="100" value="0">
       </div>
+
+      <button class="reset">Reset</button>
     </div>
   </div>
 
+  <script src="app.js"></script>
 </body>
 
 </html>

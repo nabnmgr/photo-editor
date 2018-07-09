@@ -27,6 +27,16 @@ body {
   margin: 0 auto;
 }
 
+// variables
+// :root {
+//   --brightness: 100%;
+//   --contrast: 100%;
+//   --hue-rotate: 0deg;
+//   --opacity: 100%;
+//   --saturate: 100%;
+//   --sepia: 0%;
+// }
+
 //  IMAGE
 
 .main-img {
@@ -37,6 +47,13 @@ body {
     height: 500px;
     width: auto;
     border: #fff solid 3px;
+    // filter: brightness(var(--brightness));
+    // filter: contrast(var(--contrast));
+    // filter: hue-rotate(var(--hue-rotate));
+
+    // filter: opacity(var(--opacity));
+    // filter: saturate(var(--saturate));
+    // filter: sepia(var(--sepia));
   }
 }
 
